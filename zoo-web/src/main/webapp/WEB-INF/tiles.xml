@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="baseTile" template="/WEB-INF/jsp/compositeView/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/compositeView/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/jsp/compositeView/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/compositeView/footer.jsp" />
+
+		<put-list-attribute name="mainStylesheets">
+			<add-attribute
+				value="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+			<add-attribute value="css/jqueryPlugins/jquery.loadmask.css" />
+			<add-attribute value="css/zooWeb.css" />
+		</put-list-attribute>
+		<put-list-attribute name="specificStylesheets">
+		</put-list-attribute>
+		<put-list-attribute name="mainScripts">
+			<add-attribute value="http://code.jquery.com/jquery-1.10.2.js" />
+			<add-attribute value="http://code.jquery.com/ui/1.10.3/jquery-ui.js" />
+			<add-attribute value="js/jqueryPlugins/jquery.loadmask.js" />
+			<add-attribute value="js/compositeView/footer.js" />
+			<add-attribute value="js/compositeView/menu.js" />
+		</put-list-attribute>
+		<put-list-attribute name="specificScripts">
+		</put-list-attribute>
+	</definition>
+
+	<definition name="DogList" extends="baseTile">
+		<put-attribute name="body" value="/WEB-INF/jsp/DogList.jsp" />
+		<put-list-attribute name="specificScripts">
+			<add-attribute value="js/DogList.js" />
+		</put-list-attribute>
+	</definition>
+
+</tiles-definitions>

@@ -1,0 +1,23 @@
+.header {
+	color: #5e50ff;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-style: normal;
+	text-align: center;
+}
+
+.footer {
+	color: #000000;
+	border-radius: 10px;
+	border: 1px solid #dfe7e7;
+	margin: 5px;
+	background: #dfe7e7;
+	text-align: right;
+	font-style: italic;
+}
+
+html {
+	background-color: #FFFFFF;
+	color: #007AAB;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 0.8em;
+}
