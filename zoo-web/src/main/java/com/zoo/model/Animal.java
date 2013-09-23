@@ -1,19 +1,16 @@
 package com.zoo.model;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@MappedSuperclass
 public class Animal {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
 	@Column(nullable = false)

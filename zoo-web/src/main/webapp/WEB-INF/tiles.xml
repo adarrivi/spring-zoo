@@ -8,8 +8,6 @@
 		<put-attribute name="title" value="" />
 		<put-attribute name="header"
 			value="/WEB-INF/jsp/compositeView/header.jsp" />
-		<put-attribute name="menu"
-			value="/WEB-INF/jsp/compositeView/menu.jsp" />
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer"
 			value="/WEB-INF/jsp/compositeView/footer.jsp" />
@@ -27,7 +25,6 @@
 			<add-attribute value="http://code.jquery.com/ui/1.10.3/jquery-ui.js" />
 			<add-attribute value="js/jqueryPlugins/jquery.loadmask.js" />
 			<add-attribute value="js/compositeView/footer.js" />
-			<add-attribute value="js/compositeView/menu.js" />
 		</put-list-attribute>
 		<put-list-attribute name="specificScripts">
 		</put-list-attribute>
