@@ -6,4 +6,5 @@ import com.zoo.web.dto.AnimalDto;
 
 public interface AnimalService {
 	List<AnimalDto> getAllDogs();
+
 }

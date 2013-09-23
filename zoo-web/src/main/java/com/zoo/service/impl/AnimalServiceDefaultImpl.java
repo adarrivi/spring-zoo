@@ -7,8 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.zoo.dao.AnimalDao;
+import com.zoo.dao.DogDao;
 import com.zoo.model.Animal;
+import com.zoo.model.Dog;
 import com.zoo.service.AnimalService;
 import com.zoo.web.dto.AnimalDto;
 
@@ -17,15 +18,15 @@ import com.zoo.web.dto.AnimalDto;
 public class AnimalServiceDefaultImpl implements AnimalService {
 
 	@Autowired
-	private AnimalDao animalDao;
+	private DogDao dogDao;
 
 	@Override
 	@Transactional
 	public List<AnimalDto> getAllDogs() {
 		List<AnimalDto> dtoList = new ArrayList<AnimalDto>();
-		List<Animal> allAnimals = animalDao.findAll();
-		for (Animal animals : allAnimals) {
-			dtoList.add(new AnimalDto(animals.getId().toString()));
+		List<Dog> allDogs = dogDao.findAll();
+		for (Animal dog : allDogs) {
+			dtoList.add(new AnimalDto(dog.getId().toString()));
 		}
 		return dtoList;
 	}

@@ -1,2 +1,3 @@
-insert into Animal (age) values (34);
-insert into Animal (age) values (35);
+insert into Dog (id, age, breed) values (0, 7, 'Husky');
+insert into Dog (id, age, breed) values (1, 3, 'Doberman');
+
