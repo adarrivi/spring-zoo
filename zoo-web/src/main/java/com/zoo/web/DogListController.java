@@ -26,7 +26,7 @@ public class DogListController {
 	@RequestMapping(value = "getDogList", method = RequestMethod.GET)
 	public @ResponseBody
 	List<AnimalDto> getDogList() {
-		return dogService.getAllDogs();
+		return dogService.getAllDogsSortedByAge();
 	}
 
 	@RequestMapping(value = "saveDog", method = RequestMethod.POST)

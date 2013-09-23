@@ -48,7 +48,7 @@ public class DogServiceDefaultImplTest {
 	}
 
 	private void whenGetAllDogs() {
-		animalListResult = victim.getAllDogs();
+		animalListResult = victim.getAllDogsSortedByAge();
 	}
 
 	private void thenResultShouldBeEmpty() {

@@ -5,7 +5,7 @@ import java.util.List;
 import com.zoo.web.dto.AnimalDto;
 
 public interface DogService {
-	List<AnimalDto> getAllDogs();
+	List<AnimalDto> getAllDogsSortedByAge();
 
 	void saveIfDoesntExist(String breed, int age);
 

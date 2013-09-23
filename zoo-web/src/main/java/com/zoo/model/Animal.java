@@ -14,7 +14,7 @@ public class Animal {
 	private Integer id;
 
 	@Column(nullable = false)
-	private Integer age;
+	private int age;
 
 	public Animal() {
 		// Used by hibernate
@@ -28,12 +28,35 @@ public class Animal {
 		this.id = id;
 	}
 
-	public Integer getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(Integer age) {
+	public void setAge(int age) {
 		this.age = age;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + getAge();
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Animal other = (Animal) obj;
+		return getAge() == other.getAge();
 	}
 
 }

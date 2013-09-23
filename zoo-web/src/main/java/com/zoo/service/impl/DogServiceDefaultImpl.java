@@ -1,6 +1,7 @@
 package com.zoo.service.impl;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,9 @@ public class DogServiceDefaultImpl implements DogService {
 	private DogDao dogDao;
 
 	@Override
-	public List<AnimalDto> getAllDogs() {
+	public List<AnimalDto> getAllDogsSortedByAge() {
 		List<Dog> allDogs = dogDao.findAll();
+		Collections.sort(allDogs, new AnimalComparator());
 		return transformToDto(allDogs);
 	}
 
