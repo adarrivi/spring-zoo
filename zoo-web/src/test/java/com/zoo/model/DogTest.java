@@ -40,14 +40,10 @@ public class DogTest {
 
 	@Test
 	public void equalsContract() {
-		// NONFINAL_FIELDS warning appears because breed is not final. But it
-		// doesn't need to be final as is not possible to change from outside of
-		// the class
 		// NULL_FIELDS warning appears because there are not null checks for
 		// breed. But as explained in Dog class, I am assuming the controller
 		// and database layers will check that.
-		EqualsVerifier.forClass(Dog.class)
-				.suppress(Warning.NONFINAL_FIELDS, Warning.NULL_FIELDS)
+		EqualsVerifier.forClass(Dog.class).suppress(Warning.NULL_FIELDS)
 				.usingGetClass().verify();
 	}
 

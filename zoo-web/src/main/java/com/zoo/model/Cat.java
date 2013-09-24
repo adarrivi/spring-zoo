@@ -9,7 +9,7 @@ import java.util.List;
  * @author alvaro
  * 
  */
-public class Cat extends Animal {
+public final class Cat extends Animal {
 
 	private List<Integer> lives = new ArrayList<Integer>();
 

@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class Dog extends Animal {
+public final class Dog extends Animal {
 
 	@Column(nullable = false)
 	private String breed;
