@@ -15,23 +15,28 @@ import com.zoo.web.dto.AnimalDto;
 @Controller
 public class DogListController {
 
-	@Autowired
-	private DogService dogService;
+    @Autowired
+    private DogService dogService;
 
-	@RequestMapping(value = { "/DogList" })
-	public String welcomePage() {
-		return "DogList";
-	}
+    @RequestMapping(value = { "/DogList" })
+    public String welcomePage() {
+        return "DogList";
+    }
 
-	@RequestMapping(value = "getDogList", method = RequestMethod.GET)
-	public @ResponseBody
-	List<AnimalDto> getDogList() {
-		return dogService.getAllDogsSortedByAge();
-	}
+    @RequestMapping(value = { "/test" })
+    public String welcomePage2() {
+        return "DogList";
+    }
 
-	@RequestMapping(value = "saveDog", method = RequestMethod.POST)
-	public String saveDog(@RequestParam String breed, @RequestParam int age) {
-		dogService.saveIfDoesntExist(breed, age);
-		return "DogList";
-	}
+    @RequestMapping(value = "getDogList", method = RequestMethod.GET)
+    public @ResponseBody
+    List<AnimalDto> getDogList() {
+        return dogService.getAllDogsSortedByAge();
+    }
+
+    @RequestMapping(value = "saveDog", method = RequestMethod.POST)
+    public String saveDog(@RequestParam String breed, @RequestParam int age) {
+        dogService.saveIfDoesntExist(breed, age);
+        return "DogList";
+    }
 }
